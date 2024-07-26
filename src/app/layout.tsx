@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { ThemeLayouts, NavComponent } from "@/components";
+import { ThemeLayouts } from "@/components";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ThemeLayouts navbar={<NavComponent />}>{children}</ThemeLayouts>
+        <ThemeLayouts>{children}</ThemeLayouts>
       </body>
     </html>
   );

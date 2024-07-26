@@ -5,7 +5,6 @@ import { Navbar } from "..";
 
 type ThemeLayoutsProps = {
   children: React.ReactNode;
-  navbar: React.ReactNode;
 };
 
 const ThemeLayouts: FC<ThemeLayoutsProps> = (props) => {
@@ -31,9 +30,7 @@ const ThemeLayouts: FC<ThemeLayoutsProps> = (props) => {
   return (
     <div className={darkMode ? "dark" : "white"}>
       <div className="md:min-h-screen 2xl:min-h-screen bg-zinc-100 dark:bg-zinc-800">
-        <Navbar onMode={onDarkMode} darkMode={darkMode}>
-          {props.navbar}
-        </Navbar>
+        <Navbar onMode={onDarkMode} darkMode={darkMode} />
         {props.children}
       </div>
     </div>

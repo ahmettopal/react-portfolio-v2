@@ -1,16 +1,22 @@
 "use client";
 
-import { FC, useState } from "react";
-import { ThemeButton, NavMenuButton } from "..";
+import { FC, useState, useEffect } from "react";
+import { ThemeButton, NavMenuButton, NavComponent } from "..";
+import { usePathname } from "next/navigation";
 
 type NavbarProps = {
   darkMode: boolean;
   onMode: () => void;
-  children: React.ReactNode;
 };
 
 const Navbar: FC<NavbarProps> = (props) => {
+  const pathname = usePathname();
+
   const [navbarOpen, setNavbarOpen] = useState(false);
+
+  useEffect(() => {
+    setNavbarOpen(false);
+  }, [pathname]);
 
   return (
     <nav className="flex-1 py-5 mb-6 mx-5 xl:mx-48">
@@ -20,13 +26,15 @@ const Navbar: FC<NavbarProps> = (props) => {
           isOpen={navbarOpen}
           onMenuClick={() => setNavbarOpen(!navbarOpen)}
         />
-        <div className="hidden md:flex">{props.children}</div>
-      </div>
-      {navbarOpen ? (
-        <div className="bg-white dark:bg-zinc-700 rounded-md md:hidden mt-3 w-full">
-          {props.children}
+        <div className="hidden md:flex">
+          <NavComponent />
         </div>
-      ) : null}
+      </div>
+      {navbarOpen && (
+        <div className="flex flex-col bg-white dark:bg-zinc-700 rounded-md md:hidden mt-3 w-full">
+          <NavComponent />
+        </div>
+      )}
     </nav>
   );
 };

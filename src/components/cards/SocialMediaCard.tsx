@@ -1,8 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { SocialMediaCardDto } from "@/models";
+import { SocialMediaCardDto } from "@/types";
 import { socialMediaList } from "@/constants";
-import { Bs0Circle } from "react-icons/bs";
 
 const SocialMediaCard = () => {
   return (
