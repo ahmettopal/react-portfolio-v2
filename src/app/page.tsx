@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { Greeting } from "@/components";
 
 export const metadata: Metadata = {
   title: "Home | React Portfolio",
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div>
+      <Greeting />
       <div>home</div>
     </div>
   );
