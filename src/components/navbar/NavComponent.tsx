@@ -9,20 +9,20 @@ const NavComponent = () => {
   const path = segment ? `/${segment}` : "/";
 
   return (
-    <>
+    <div className="flex flex-col md:flex-row">
       {Object.entries(NavMenu).map(([key, value]) => {
         const isActive = key === path;
         return (
           <NextLink
             key={key}
             href={key}
-            className="bg-white dark:bg-zinc-700 text-black dark:text-white px-2 py-2 rounded-md md:ml-3 shadow-md h-10"
+            className="bg-white dark:bg-zinc-700 text-black dark:text-white px-2 py-2 rounded-md md:mr-3 shadow-md h-10"
           >
             {value}
           </NextLink>
         );
       })}
-    </>
+    </div>
   );
 };
 
