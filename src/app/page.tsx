@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Greeting } from "@/components";
+import { Greeting, SkillsList } from "@/components";
+import { techStack } from "@/constants";
 
 export const metadata: Metadata = {
   title: "Home | React Portfolio",
@@ -8,9 +9,16 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex flex-col">
       <Greeting />
-      <div>home</div>
+      <div className="flex justify-center bg-white dark:bg-zinc-700">
+        <div className="2xl:min-w-[50%] p-3 md:p-20">
+          <h3 className="text-center text-sm sm:text-md md:text-2xl font-bold mb-2 dark:text-slate-300">
+            Skills & Tools
+          </h3>
+          <SkillsList data={techStack} />
+        </div>
+      </div>
     </div>
   );
 }

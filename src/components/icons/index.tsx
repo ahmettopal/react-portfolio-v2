@@ -1,0 +1,9 @@
+export { default as React } from "./React.svg";
+export { default as ReactNative } from "./ReactNative.svg";
+export { default as Tailwind } from "./Tailwind.svg";
+export { default as Firebase } from "./Firebase.svg";
+export { default as Chakra } from "./Chakra.svg";
+export { default as Contact } from "./Contact.svg";
+export { default as Typescript } from "./Typescript.svg";
+export { default as Next } from "./Next.svg";
+export { default as Javascript } from "./Javascript.svg";

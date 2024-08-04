@@ -1,4 +1,4 @@
-import { SocialModdiaIcons } from "./icons";
+import { SocialModdiaIcons, TechStackIcons } from "./icons";
 
 export const fullName = "Ahmet Topal";
 export const mail = "ahmettopal9816@gmail.com";
@@ -29,3 +29,38 @@ export const NavMenu = {
   "/contact": "Contact",
   "/assets/resume/sample.pdf": "Resume",
 };
+
+export const techStack = [
+  {
+    name: "React.js",
+    icon: TechStackIcons.React,
+  },
+  {
+    name: "Next.js",
+    icon: TechStackIcons.Next,
+  },
+  {
+    name: "React Native",
+    icon: TechStackIcons.ReactNative,
+  },
+  {
+    name: "Tailwind CSS",
+    icon: TechStackIcons.Tailwind,
+  },
+  {
+    name: "Chakra UI",
+    icon: TechStackIcons.Chakra,
+  },
+  {
+    name: "Firebase",
+    icon: TechStackIcons.Firebase,
+  },
+  {
+    name: "Typescript",
+    icon: TechStackIcons.Typescript,
+  },
+  {
+    name: "Javascript",
+    icon: TechStackIcons.Javascript,
+  },
+];
