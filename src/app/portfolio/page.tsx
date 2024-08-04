@@ -1,5 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
+import { Title, PortfolioCard } from "@/components";
+import { PortfolioData } from "@/constants/data";
 
 export const metadata: Metadata = {
   title: "Portfolio | React Portfolio",
@@ -9,7 +11,28 @@ export const metadata: Metadata = {
 const PortfolioPage = () => {
   return (
     <div className="dark:bg-zinc-700">
-      <div>portfolio</div>
+      <Title title="My Portfolio" />
+      <div className="p-5">
+        {PortfolioData.map((item, index: number) => {
+          return (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center"
+            >
+              <PortfolioCard
+                image={item?.image}
+                title={item?.title}
+                description={item?.description}
+                webLink={item?.webLink}
+                androidLink={item?.androidLink}
+                iosLink={item?.iosLink}
+                tech={item?.tech}
+                //onClick={() => showModalItem(index)}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };

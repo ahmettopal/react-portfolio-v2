@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BsMouse } from "react-icons/bs";
+import { fullName } from "@/constants";
 import { SocialMediaCard } from "..";
 
 const Greeting = () => {
@@ -8,13 +9,13 @@ const Greeting = () => {
       <div className="flex items-center justify-center flex-col-reverse md:flex-row md:space-x-15 lg:space-x-28">
         <div className="text-start p-8">
           <p className="text-2xl md:text-6xl 2xl:text-9xl py-2 text-gray-900 dark:text-gray-400 font-sourceCodePro">
-            Ahmet Topal
+            {fullName}
           </p>
           <p className="text-xl md:text-4xl 2xl:text-7xl py-2 text-gray-900 dark:text-gray-300">
             - Software Developer
           </p>
           <p className="text-md 2xl:text-5xl md:py-5 max-w-sm 2xl:max-w-3xl leading-8 text-gray-900 dark:text-gray-300">
-            &#60; Hello this is Ahmet. I am working as a full stack web and
+            &#60; Hello this is Ahmet. I am working as a front end web and
             mobile developer. You can find the technologies I use below.
             &#47;&#62;
           </p>
@@ -32,7 +33,10 @@ const Greeting = () => {
         <SocialMediaCard />
       </div>
       <div className="flex justify-center p-10 dark:text-slate-200">
-        <BsMouse size={25} className="animate-bounce" />
+        <BsMouse
+          size={25}
+          className="animate-bounce text-black dark:text-white"
+        />
       </div>
     </div>
   );

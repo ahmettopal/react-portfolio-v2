@@ -8,3 +8,6 @@ export { default as Greeting } from "./home/Greeting";
 export { default as SocialMediaCard } from "./cards/SocialMediaCard";
 export { default as Footer } from "./Footer";
 export { default as SkillsList } from "./skills/SkillsList";
+export { default as Title } from "./Title";
+export { default as LinkItem } from "./LinkItem";
+export { default as PortfolioCard } from "./cards/PortfolioCard";

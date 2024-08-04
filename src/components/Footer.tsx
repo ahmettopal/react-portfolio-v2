@@ -5,7 +5,7 @@ import { fullName, mail } from "@/constants";
 const Footer = () => {
   return (
     <div className="bg-zinc-100 dark:bg-zinc-800 p-8">
-      <div className="flex-1 md:flex justify-between lg:mx-24 items-center text-gray-600 font-semibold">
+      <div className="flex-1 md:flex justify-between lg:mx-24 items-center text-gray-600 font-semibold gap-1">
         <div className="text-start dark:text-gray-400">
           <p className="max-w-xl my-2">
             If you have a website or mobile app idea in mind or you need some
