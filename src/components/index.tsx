@@ -14,3 +14,5 @@ export { default as PortfolioCard } from "./cards/PortfolioCard";
 export { default as Modal } from "./modals/Modal";
 export { default as PortfolioModal } from "./modals/PortfolioModal";
 export { default as PortfolioImage } from "./portfolio/PortfolioImage";
+export { default as ContactFormSubmitButton } from "./buttons/ContactFormSubmitButton";
+export { default as ContactForm } from "./contact/ContactForm";

@@ -63,8 +63,8 @@ const PortfolioCard: FC<PortfolioCardProps> = (props) => {
                     key={index}
                     src={data}
                     alt="tech"
-                    width={28}
-                    height={28}
+                    width={22}
+                    height={22}
                   />
                 );
               })}

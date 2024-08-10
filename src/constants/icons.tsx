@@ -9,6 +9,7 @@ import {
   Typescript,
   Next,
   Javascript,
+  Contact,
 } from "@/components/icons";
 
 export const SocialModdiaIcons = {
@@ -27,3 +28,5 @@ export const TechStackIcons = {
   Next: Next,
   Javascript: Javascript,
 };
+
+export const ContactSvg = Contact;
