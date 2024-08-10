@@ -11,3 +11,6 @@ export { default as SkillsList } from "./skills/SkillsList";
 export { default as Title } from "./Title";
 export { default as LinkItem } from "./LinkItem";
 export { default as PortfolioCard } from "./cards/PortfolioCard";
+export { default as Modal } from "./modals/Modal";
+export { default as PortfolioModal } from "./modals/PortfolioModal";
+export { default as PortfolioImage } from "./portfolio/PortfolioImage";

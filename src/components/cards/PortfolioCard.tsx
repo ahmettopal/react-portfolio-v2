@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import { AiOutlineLink, AiFillAndroid, AiFillApple } from "react-icons/ai";
-import { LinkItem } from "..";
+import { LinkItem, PortfolioImage } from "..";
 
 type PortfolioCardProps = {
   image: string;
@@ -11,7 +11,7 @@ type PortfolioCardProps = {
   androidLink: string;
   iosLink: string;
   tech: any;
-  //onClick: () => void;
+  index: number;
 };
 
 const PortfolioCard: FC<PortfolioCardProps> = (props) => {
@@ -58,22 +58,21 @@ const PortfolioCard: FC<PortfolioCardProps> = (props) => {
             </span>
             <div className="text-lg flex gap-2 items-center">
               {props.tech?.map((data: any, index: number) => {
-                return <Image key={index} src={data} alt="tech" />;
+                return (
+                  <Image
+                    key={index}
+                    src={data}
+                    alt="tech"
+                    width={28}
+                    height={28}
+                  />
+                );
               })}
             </div>
           </div>
         </div>
       </div>
-      <div className="flex cursor-pointer md:w-5/12">
-        <Image
-          width={500}
-          height={250}
-          src={props.image}
-          objectFit="cover"
-          alt="portfolio"
-          // onClick={onClick}
-        />
-      </div>
+      <PortfolioImage image={props.image} index={props.index} />
     </div>
   );
 };

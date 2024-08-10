@@ -1,4 +1,3 @@
-import React from "react";
 import { Metadata } from "next";
 import { Title, PortfolioCard } from "@/components";
 import { PortfolioData } from "@/constants/data";
@@ -12,7 +11,7 @@ const PortfolioPage = () => {
   return (
     <div className="dark:bg-zinc-700">
       <Title title="My Portfolio" />
-      <div className="p-5">
+      <div className="px-5">
         {PortfolioData.map((item, index: number) => {
           return (
             <div
@@ -27,7 +26,7 @@ const PortfolioPage = () => {
                 androidLink={item?.androidLink}
                 iosLink={item?.iosLink}
                 tech={item?.tech}
-                //onClick={() => showModalItem(index)}
+                index={index}
               />
             </div>
           );
