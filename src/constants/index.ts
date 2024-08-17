@@ -27,7 +27,6 @@ export const NavMenu = {
   "/": "Home",
   "/portfolio": "Portfolio",
   "/contact": "Contact",
-  "/assets/resume/sample.pdf": "Resume",
 };
 
 export const techStack = [

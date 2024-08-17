@@ -11,7 +11,7 @@ const Footer = () => {
             If you have a website or mobile app idea in mind or you need some
             advice about product design, feel free to contact me.
           </p>
-          <NavComponent />
+          <NavComponent isFooter={true} />
         </div>
         <div className="text-center font-bold text-gray-400 text-sm mt-5 md:mt-0">
           <div className="text-2xl 2xl:text-5xl flex justify-center gap-4 py-1 text-gray-600 dark:text-slate-200">

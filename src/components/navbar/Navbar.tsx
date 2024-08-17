@@ -27,12 +27,12 @@ const Navbar: FC<NavbarProps> = (props) => {
           onMenuClick={() => setNavbarOpen(!navbarOpen)}
         />
         <div className="hidden md:flex">
-          <NavComponent />
+          <NavComponent isFooter={false} />
         </div>
       </div>
       {navbarOpen && (
         <div className="flex flex-col bg-white dark:bg-zinc-700 rounded-md md:hidden mt-3 w-full">
-          <NavComponent />
+          <NavComponent isFooter={false} />
         </div>
       )}
     </nav>
